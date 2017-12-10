@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sua Escolha
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <ion-item-group>
+                <ion-item-divider color="light">
+                    <ion-icon ios="ios-hammer" md="md-hammer"></ion-icon>
+                    Solução
+                </ion-item-divider>
+
+                <ion-item>{{ solucao.descricao }}</ion-item>
+                <ion-item>{{ solucao.descricaocompleta }}</ion-item>
+            </ion-item-group>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button block (click)="avancaNoAgendamento()">Avançar no Agendamento</button>
+
+</ion-content>

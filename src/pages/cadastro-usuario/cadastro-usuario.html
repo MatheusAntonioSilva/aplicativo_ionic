@@ -1,0 +1,54 @@
+<ion-content class="cadastro-usuario-content" padding>
+
+    <ion-row class="logo-row">
+        <ion-col></ion-col>
+        <ion-col width-67>
+            <img src="images/logo.png" class="logo-img" />
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+
+    <h4 text-center>Cadastro</h4>
+
+    <div class="cadastro-usuario-box">
+        <form (ngSubmit)="register()" #registerForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+
+                        <ion-item>
+                            <ion-input type="text" placeholder="Nome Completo" name="nome" [(ngModel)]="nome" required></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <input [textMask]="{mask: mask}" placeholder="Celular" name="telefone" [(ngModel)]="telefone" style="border:0px;" required>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-input type="text" placeholder="E-mail" name="email" [(ngModel)]="email" required></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-input type="password" placeholder="Senha" name="senha" [(ngModel)]="senha" required></ion-input>
+                        </ion-item>
+
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="signup-col">
+                    <button ion-button class="submit-btn" full type="submit">Cadastrar</button>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="signup-col">
+                    <button ion-button class="register-btn" block clear (click)="voltar()">VOLTAR</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
+
+</ion-content>

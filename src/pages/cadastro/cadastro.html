@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Estamos Quase lá
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h2>{{ solucao.descricao }}</h2>
+    <form (ngSubmit)="agendou()">
+        <ion-item>
+            <ion-label stacked>Descrição</ion-label>
+            <ion-input [(ngModel)]="descricao" name="descricao"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Data</ion-label>
+            <ion-datetime displayFormat="MM/DD/YY" [(ngModel)]="data" name="data"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Horario Inicio</ion-label>
+            <ion-datetime displayFormat="MM/DD/YY HH:mm" [(ngModel)]="horario_inicio" name="horario_inicio"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Horario Fim</ion-label>
+            <ion-datetime displayFormat="MM/DD/YY HH:mm" [(ngModel)]="horario_fim" name="horario_fim">
+            </ion-datetime>
+        </ion-item>
+
+        <button ion-button block type="submit">Finalizar Agendamento</button>
+    </form>
+
+
+</ion-content>
